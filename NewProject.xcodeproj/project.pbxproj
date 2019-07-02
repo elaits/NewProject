@@ -20,6 +20,9 @@
 		CEACC2D122C66C6600381988 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACC2D022C66C6600381988 /* PhotoViewController.swift */; };
 		CEACC2D322C66DBC00381988 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACC2D222C66DBC00381988 /* PhotoCollectionViewCell.swift */; };
 		CEACC2D622C96DF200381988 /* ThumbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACC2D522C96DF200381988 /* ThumbnailViewController.swift */; };
+		CEACC2DE22CA235D00381988 /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACC2DD22CA235D00381988 /* AlbumService.swift */; };
+		CEACC2E022CA23E100381988 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACC2DF22CA23E100381988 /* PhotoService.swift */; };
+		CEACC2E222CA23EF00381988 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACC2E122CA23EF00381988 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		CEACC2D022C66C6600381988 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		CEACC2D222C66DBC00381988 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEACC2D522C96DF200381988 /* ThumbnailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailViewController.swift; sourceTree = "<group>"; };
+		CEACC2DD22CA235D00381988 /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		CEACC2DF22CA23E100381988 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		CEACC2E122CA23EF00381988 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +76,11 @@
 		CEACC2A922C63B6200381988 /* NewProject */ = {
 			isa = PBXGroup;
 			children = (
-				CEACC2B922C63B6300381988 /* Info.plist */,
-				CEACC2B122C63B6200381988 /* NewProject.xcdatamodeld */,
-				CEACC2B422C63B6300381988 /* Assets.xcassets */,
-				CEACC2B622C63B6300381988 /* LaunchScreen.storyboard */,
 				CEACC2D822C9748700381988 /* Base */,
+				CEACC2B122C63B6200381988 /* NewProject.xcdatamodeld */,
+				CEACC2E322CA241F00381988 /* Models */,
 				CEACC2C322C63BAC00381988 /* AlbumController */,
 				CEACC2CD22C66B0E00381988 /* StoryBoard */,
-				CEACC2C622C63BE400381988 /* AlbumModel */,
 				CEACC2D422C66FFE00381988 /* PhotoClasses */,
 				CEACC2D722C9746A00381988 /* ThumbnailVieController */,
 			);
@@ -93,14 +96,6 @@
 			path = AlbumController;
 			sourceTree = "<group>";
 		};
-		CEACC2C622C63BE400381988 /* AlbumModel */ = {
-			isa = PBXGroup;
-			children = (
-				CEACC2C422C63BBF00381988 /* AlbumModel.swift */,
-			);
-			path = AlbumModel;
-			sourceTree = "<group>";
-		};
 		CEACC2CD22C66B0E00381988 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +109,6 @@
 			children = (
 				CEACC2D222C66DBC00381988 /* PhotoCollectionViewCell.swift */,
 				CEACC2D022C66C6600381988 /* PhotoViewController.swift */,
-				CEACC2CE22C66B2E00381988 /* PhotoModel.swift */,
 			);
 			path = PhotoClasses;
 			sourceTree = "<group>";
@@ -132,8 +126,23 @@
 			children = (
 				CEACC2AA22C63B6200381988 /* AppDelegate.swift */,
 				CEACC2AC22C63B6200381988 /* ViewController.swift */,
+				CEACC2B922C63B6300381988 /* Info.plist */,
+				CEACC2B422C63B6300381988 /* Assets.xcassets */,
+				CEACC2B622C63B6300381988 /* LaunchScreen.storyboard */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		CEACC2E322CA241F00381988 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEACC2DD22CA235D00381988 /* AlbumService.swift */,
+				CEACC2DF22CA23E100381988 /* PhotoService.swift */,
+				CEACC2C422C63BBF00381988 /* AlbumModel.swift */,
+				CEACC2E122CA23EF00381988 /* NetworkManager.swift */,
+				CEACC2CE22C66B2E00381988 /* PhotoModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +220,12 @@
 				CEACC2D322C66DBC00381988 /* PhotoCollectionViewCell.swift in Sources */,
 				CEACC2C222C63BA200381988 /* AlbumTableViewCell.swift in Sources */,
 				CEACC2D622C96DF200381988 /* ThumbnailViewController.swift in Sources */,
+				CEACC2DE22CA235D00381988 /* AlbumService.swift in Sources */,
 				CEACC2C522C63BBF00381988 /* AlbumModel.swift in Sources */,
+				CEACC2E222CA23EF00381988 /* NetworkManager.swift in Sources */,
 				CEACC2AD22C63B6200381988 /* ViewController.swift in Sources */,
 				CEACC2C022C63B9200381988 /* AlbumTableViewController.swift in Sources */,
+				CEACC2E022CA23E100381988 /* PhotoService.swift in Sources */,
 				CEACC2AB22C63B6200381988 /* AppDelegate.swift in Sources */,
 				CEACC2B322C63B6200381988 /* NewProject.xcdatamodeld in Sources */,
 				CEACC2D122C66C6600381988 /* PhotoViewController.swift in Sources */,

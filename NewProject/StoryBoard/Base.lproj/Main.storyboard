@@ -116,6 +116,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="f1C-jS-frA">
+                                                    <rect key="frame" x="78" y="48" width="20" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                         </view>
                                         <constraints>
@@ -127,6 +131,7 @@
                                             <constraint firstItem="Q5D-xa-P2C" firstAttribute="trailing" secondItem="mni-3A-lnV" secondAttribute="trailing" id="nyW-Q9-jtf"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="f1C-jS-frA" id="p4l-UK-HTA"/>
                                             <outlet property="photoImageView" destination="Q5D-xa-P2C" id="vx2-gO-tP6"/>
                                             <outlet property="photoTitle" destination="mni-3A-lnV" id="XGO-q5-sps"/>
                                         </connections>
@@ -196,7 +201,6 @@
         <!--Navigation Controller-->
         <scene sceneID="hng-Sj-Dfe">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tOP-y5-J7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IMB-6a-vKf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RJ2-hw-AXe">
@@ -208,6 +212,7 @@
                         <segue destination="NRd-DQ-1hB" kind="relationship" relationship="rootViewController" id="DlW-4A-Hle"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOP-y5-J7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="955.07246376811599" y="107.8125"/>
         </scene>

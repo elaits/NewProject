@@ -10,25 +10,31 @@ import UIKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var photoTitle: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
-    
-    func setPhotoTitle(_ photo: PhotoModel) {
-        photoTitle.text = String(photo.title)
-    }
-
+        
     func setPhotoCell(_ photo: PhotoModel) {
+        activityIndicator.startAnimating()
+        
         guard let url = URL(string: photo.thumbnailUrl ) else { return }
                 DispatchQueue.global().async {
                     do
                     {
                         let data = try Data(contentsOf: url)
+                        self.activityIndicator.stopAnimating()
+                        self.activityIndicator.alpha = 0
+                        
                         DispatchQueue.main.async { [weak self] in
                             self?.photoImageView.image = UIImage(data: data)
                         }
                     } catch {
                         print(error.localizedDescription)
                     }
+                   
                 }
+        photoTitle.text = photo.title
+        
     }
 }
+

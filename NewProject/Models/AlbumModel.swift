@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AlbumModel : Decodable {
+struct AlbumModel: Decodable {
     var userId: Int
     var id: Int
     var title : String

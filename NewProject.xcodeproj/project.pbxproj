@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE653E0622CE28A400E71185 /* extension+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE653E0522CE28A400E71185 /* extension+Utils.swift */; };
 		CEACC2AB22C63B6200381988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACC2AA22C63B6200381988 /* AppDelegate.swift */; };
-		CEACC2AD22C63B6200381988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACC2AC22C63B6200381988 /* ViewController.swift */; };
 		CEACC2B022C63B6200381988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEACC2AE22C63B6200381988 /* Main.storyboard */; };
 		CEACC2B322C63B6200381988 /* NewProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEACC2B122C63B6200381988 /* NewProject.xcdatamodeld */; };
 		CEACC2B522C63B6300381988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEACC2B422C63B6300381988 /* Assets.xcassets */; };
@@ -26,9 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE653E0522CE28A400E71185 /* extension+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+Utils.swift"; sourceTree = "<group>"; };
 		CEACC2A722C63B6200381988 /* NewProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEACC2AA22C63B6200381988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEACC2AC22C63B6200381988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEACC2AF22C63B6200381988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEACC2B222C63B6200381988 /* NewProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewProject.xcdatamodel; sourceTree = "<group>"; };
 		CEACC2B422C63B6300381988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +57,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE653E0422CE00A700E71185 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEACC2D422C66FFE00381988 /* PhotoController */,
+				CEACC2C322C63BAC00381988 /* AlbumController */,
+				CEACC2D722C9746A00381988 /* ThumbnailViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE653E0722CE2C0000E71185 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE653E0522CE28A400E71185 /* extension+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CEACC29E22C63B6200381988 = {
 			isa = PBXGroup;
 			children = (
@@ -76,13 +94,12 @@
 		CEACC2A922C63B6200381988 /* NewProject */ = {
 			isa = PBXGroup;
 			children = (
+				CE653E0722CE2C0000E71185 /* Extensions */,
 				CEACC2D822C9748700381988 /* Base */,
 				CEACC2B122C63B6200381988 /* NewProject.xcdatamodeld */,
 				CEACC2E322CA241F00381988 /* Models */,
-				CEACC2C322C63BAC00381988 /* AlbumController */,
 				CEACC2CD22C66B0E00381988 /* StoryBoard */,
-				CEACC2D422C66FFE00381988 /* PhotoClasses */,
-				CEACC2D722C9746A00381988 /* ThumbnailVieController */,
+				CE653E0422CE00A700E71185 /* ViewControllers */,
 			);
 			path = NewProject;
 			sourceTree = "<group>";
@@ -104,28 +121,27 @@
 			path = StoryBoard;
 			sourceTree = "<group>";
 		};
-		CEACC2D422C66FFE00381988 /* PhotoClasses */ = {
+		CEACC2D422C66FFE00381988 /* PhotoController */ = {
 			isa = PBXGroup;
 			children = (
 				CEACC2D222C66DBC00381988 /* PhotoCollectionViewCell.swift */,
 				CEACC2D022C66C6600381988 /* PhotoViewController.swift */,
 			);
-			path = PhotoClasses;
+			path = PhotoController;
 			sourceTree = "<group>";
 		};
-		CEACC2D722C9746A00381988 /* ThumbnailVieController */ = {
+		CEACC2D722C9746A00381988 /* ThumbnailViewController */ = {
 			isa = PBXGroup;
 			children = (
 				CEACC2D522C96DF200381988 /* ThumbnailViewController.swift */,
 			);
-			path = ThumbnailVieController;
+			path = ThumbnailViewController;
 			sourceTree = "<group>";
 		};
 		CEACC2D822C9748700381988 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				CEACC2AA22C63B6200381988 /* AppDelegate.swift */,
-				CEACC2AC22C63B6200381988 /* ViewController.swift */,
 				CEACC2B922C63B6300381988 /* Info.plist */,
 				CEACC2B422C63B6300381988 /* Assets.xcassets */,
 				CEACC2B622C63B6300381988 /* LaunchScreen.storyboard */,
@@ -138,8 +154,8 @@
 			children = (
 				CEACC2DD22CA235D00381988 /* AlbumService.swift */,
 				CEACC2DF22CA23E100381988 /* PhotoService.swift */,
-				CEACC2C422C63BBF00381988 /* AlbumModel.swift */,
 				CEACC2E122CA23EF00381988 /* NetworkManager.swift */,
+				CEACC2C422C63BBF00381988 /* AlbumModel.swift */,
 				CEACC2CE22C66B2E00381988 /* PhotoModel.swift */,
 			);
 			path = Models;
@@ -221,9 +237,9 @@
 				CEACC2C222C63BA200381988 /* AlbumTableViewCell.swift in Sources */,
 				CEACC2D622C96DF200381988 /* ThumbnailViewController.swift in Sources */,
 				CEACC2DE22CA235D00381988 /* AlbumService.swift in Sources */,
+				CE653E0622CE28A400E71185 /* extension+Utils.swift in Sources */,
 				CEACC2C522C63BBF00381988 /* AlbumModel.swift in Sources */,
 				CEACC2E222CA23EF00381988 /* NetworkManager.swift in Sources */,
-				CEACC2AD22C63B6200381988 /* ViewController.swift in Sources */,
 				CEACC2C022C63B9200381988 /* AlbumTableViewController.swift in Sources */,
 				CEACC2E022CA23E100381988 /* PhotoService.swift in Sources */,
 				CEACC2AB22C63B6200381988 /* AppDelegate.swift in Sources */,

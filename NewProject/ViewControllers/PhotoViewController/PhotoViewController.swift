@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class PhotoViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var photoCollectionView: UICollectionView!
@@ -20,6 +20,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
             }
         }
     }
+    
     var albumId : Int! {
         didSet {
             PhotoService.fetchPhotos(albumId: albumId) { (photos) in
@@ -30,7 +31,6 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         photoCollectionView.dataSource = self
         photoCollectionView.delegate = self
     }
@@ -39,6 +39,10 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.photos = photo
     }
     
+    
+}
+
+extension PhotoViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
     }
@@ -47,20 +51,15 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         if let itemCell = photoCollectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCollectionViewCell {
             itemCell.setPhotoCell(photos[indexPath.row])
             return itemCell
-            
         } else { fatalError() }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let myModalViewController = storyboard.instantiateViewController(withIdentifier: "modalVC") as? ThumbnailViewController
         myModalViewController?.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         myModalViewController?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         self.present((myModalViewController ?? nil)!, animated: true, completion: nil)
-        
         myModalViewController?.setThumbnailPhoto(photos[indexPath.row])
     }
-    
 }

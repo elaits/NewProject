@@ -13,7 +13,6 @@ class AlbumTableViewController: UITableViewController {
     var showAlbumSegueName = "ShowAlbum"
     var albums = [AlbumModel]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         AlbumService.fetchAlbums { [weak self] (albums) in
@@ -34,7 +33,7 @@ class AlbumTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return albums.count }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: AlbumTableViewCell.className, for: indexPath) as? AlbumTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AlbumTableViewCell.className, for: indexPath) as? AlbumTableViewCell else { fatalError() }
         cell.setCell(albums[indexPath.row])
         return cell
     }
@@ -43,5 +42,4 @@ class AlbumTableViewController: UITableViewController {
         albumId = indexPath.row + 1
         performSegue(withIdentifier: showAlbumSegueName, sender: albumId)
     }
-    
 }

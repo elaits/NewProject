@@ -15,7 +15,7 @@ class ThumbnailViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func closeThumbnail(_ sender: Any) {
+    @IBAction func onCloseButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     

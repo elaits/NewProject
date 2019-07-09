@@ -22,14 +22,15 @@ class AlbumTableViewController: UITableViewController {
             }
         }
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showAlbumSegueName {
             guard let PhotosController = segue.destination as? PhotoViewController else { return }
             PhotosController.albumId = albumId
         }
     }
-    
+}
+
+extension AlbumTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return albums.count }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,3 +44,7 @@ class AlbumTableViewController: UITableViewController {
         performSegue(withIdentifier: showAlbumSegueName, sender: albumId)
     }
 }
+
+
+
+

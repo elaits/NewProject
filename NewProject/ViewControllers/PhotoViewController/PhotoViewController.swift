@@ -38,8 +38,6 @@ class PhotoViewController: UIViewController {
     func setPhoto(_ photo: [PhotoModel]) {
         self.photos = photo
     }
-    
-    
 }
 
 extension PhotoViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -48,7 +46,7 @@ extension PhotoViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let itemCell = photoCollectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCollectionViewCell {
+        if let itemCell = photoCollectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.className, for: indexPath) as? PhotoCollectionViewCell {
             itemCell.setPhotoCell(photos[indexPath.row])
             return itemCell
         } else { fatalError() }

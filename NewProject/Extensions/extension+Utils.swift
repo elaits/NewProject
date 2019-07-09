@@ -8,4 +8,8 @@
 
 import Foundation
 
-// Чуть позже добавлю
+extension NSObject {
+    static var className: String {
+        return String(describing: self)
+    }
+}

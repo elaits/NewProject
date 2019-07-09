@@ -9,13 +9,13 @@
 import Foundation
 
 class PhotoService {
-    static var path = "photos"
+    static var path = "/photos"
     static let errorClosure: (Error) -> Void = {
         print($0)
     }
     
     static func fetchPhotos(albumId: Int, completion: @escaping ([PhotoModel])->Void){
-        let params = ["albumId": "\(albumId)"]
+        let params = ["albumId" : "\(albumId)"]
   
         NetworkManager.fetch(path: path, params: params, failure: errorClosure) { (data) in
             do {

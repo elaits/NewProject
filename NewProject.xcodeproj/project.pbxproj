@@ -60,8 +60,8 @@
 		CE653E0422CE00A700E71185 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CEACC2D422C66FFE00381988 /* PhotoController */,
-				CEACC2C322C63BAC00381988 /* AlbumController */,
+				CEACC2D422C66FFE00381988 /* PhotoViewController */,
+				CEACC2C322C63BAC00381988 /* AlbumViewController */,
 				CEACC2D722C9746A00381988 /* ThumbnailViewController */,
 			);
 			path = ViewControllers;
@@ -104,13 +104,13 @@
 			path = NewProject;
 			sourceTree = "<group>";
 		};
-		CEACC2C322C63BAC00381988 /* AlbumController */ = {
+		CEACC2C322C63BAC00381988 /* AlbumViewController */ = {
 			isa = PBXGroup;
 			children = (
 				CEACC2BF22C63B9200381988 /* AlbumTableViewController.swift */,
 				CEACC2C122C63BA200381988 /* AlbumTableViewCell.swift */,
 			);
-			path = AlbumController;
+			path = AlbumViewController;
 			sourceTree = "<group>";
 		};
 		CEACC2CD22C66B0E00381988 /* StoryBoard */ = {
@@ -121,13 +121,13 @@
 			path = StoryBoard;
 			sourceTree = "<group>";
 		};
-		CEACC2D422C66FFE00381988 /* PhotoController */ = {
+		CEACC2D422C66FFE00381988 /* PhotoViewController */ = {
 			isa = PBXGroup;
 			children = (
 				CEACC2D222C66DBC00381988 /* PhotoCollectionViewCell.swift */,
 				CEACC2D022C66C6600381988 /* PhotoViewController.swift */,
 			);
-			path = PhotoController;
+			path = PhotoViewController;
 			sourceTree = "<group>";
 		};
 		CEACC2D722C9746A00381988 /* ThumbnailViewController */ = {

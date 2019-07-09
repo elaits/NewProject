@@ -24,8 +24,8 @@ class PhotoCollectionViewCell: UICollectionViewCell {
                 let data = try Data(contentsOf: url)
                 DispatchQueue.main.async { [weak self] in
                     self?.photoImageView.image = UIImage(data: data)
-                    self!.activityIndicator.stopAnimating()
-                    self!.activityIndicator.alpha = 0
+                    self?.activityIndicator.stopAnimating()
+                    self?.activityIndicator.alpha = 0
                 }
             } catch {
                 print(error.localizedDescription)
